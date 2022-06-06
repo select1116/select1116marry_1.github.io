@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="栾继亮婚礼路线图" />
+    <meta name="description" content="栾继亮婚礼路线图" />
+    <title>栾继亮婚礼路线图</title>
+    <!--引用百度地图API-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=AVcq2nAfttNoUyUFRzUynqNhR03gMWwP"></script>
+  </head>
+
+  <body>
+    <!--百度地图容器-->
+    <div style="width:1500px;height:800px;border:#ccc solid 1px;font-size:12px" id="map"></div>style="color:#2f83c7" target="_blank">申请密匙</a>
+    </p>
+  </body>
+  <script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){
+      map = new BMap.Map("map");
+      map.centerAndZoom(new BMap.Point(122.990238,41.109313),19);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var plOpts = [
+        {strokeColor:"#f00",strokeWeight:"6",strokeOpacity:"0.6"},
+        {strokeColor:"#00f",strokeWeight:"6",strokeOpacity:"0.6"}
+      ];
+      var plPath = [
+        [
+          new BMap.Point(122.990817,41.109395),
+          new BMap.Point(122.990988,41.109707),
+          new BMap.Point(122.990242,41.109962),
+          new BMap.Point(122.98911,41.110336),
+          new BMap.Point(122.990566,41.113026),
+          new BMap.Point(122.992578,41.116287),
+          new BMap.Point(122.994262,41.119477),
+          new BMap.Point(122.994047,41.12124),
+          new BMap.Point(122.994923,41.123217),
+          new BMap.Point(122.995771,41.124501),
+          new BMap.Point(122.99985,41.124066),
+          new BMap.Point(123.005868,41.12211),
+          new BMap.Point(123.002585,41.116685),
+          new BMap.Point(123.001049,41.115944),
+          new BMap.Point(123.001049,41.115944),
+          new BMap.Point(123.001049,41.115944),
+          new BMap.Point(123.001049,41.115944)
+        ],
+        [
+          new BMap.Point(123.001166,41.115904),
+          new BMap.Point(123.001579,41.11515),
+          new BMap.Point(123.002873,41.115245),
+          new BMap.Point(123.003097,41.116094),
+          new BMap.Point(123.002118,41.116624),
+          new BMap.Point(123.001238,41.116196),
+          new BMap.Point(123.001211,41.115387),
+          new BMap.Point(123.002235,41.115027),
+          new BMap.Point(123.003088,41.115496),
+          new BMap.Point(123.002935,41.116325),
+          new BMap.Point(123.001875,41.116603),
+          new BMap.Point(123.001085,41.115618),
+          new BMap.Point(123.001857,41.115027),
+          new BMap.Point(123.003178,41.115428),
+          new BMap.Point(123.00546,41.114735),
+          new BMap.Point(123.011766,41.112643),
+          new BMap.Point(123.008325,41.107105),
+          new BMap.Point(123.002109,41.097123),
+          new BMap.Point(123.00104,41.095424),
+          new BMap.Point(122.993611,41.097762),
+          new BMap.Point(122.984098,41.100888),
+          new BMap.Point(122.988248,41.108794),
+          new BMap.Point(122.989344,41.10842),
+          new BMap.Point(122.99004,41.109612),
+          new BMap.Point(122.990772,41.109398),
+          new BMap.Point(122.990772,41.109374),
+          new BMap.Point(122.990772,41.109374),
+          new BMap.Point(122.990772,41.109374)
+        ],
+      ];
+      for(var index = 0; index < plOpts.length; index++){
+        var polyline = new BMap.Polyline(plPath[index],plOpts[index]);
+        map.addOverlay(polyline);
+      }
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+      map.addControl(scaleControl);
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+      map.addControl(navControl);
+      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:false});
+      map.addControl(overviewControl);
+    }
+    var map;
+      initMap();
+  </script>
+</html>
